@@ -1,0 +1,104 @@
+# Portfolio 3D - Quick Reference Guide
+
+## 🎲 Interactive Dice Roll Component (Radio.tsx)
+
+**What it is:**
+A CSS-only animated 3D dice rolling component integrated into the `Projects.tsx` section. It uses a pure CSS checkbox hack (`:checked`) to trigger the animations without needing complex React state.
+
+**How it works:**
+1. **The Toggle:** A hidden `<input type="checkbox" id="rollToggle" />` controls the entire interaction.
+2. **The Label Button:** `<label htmlFor="rollToggle" className="btn">` acts as our clickable "ROLL/STOP" button. Clicking it checks/unchecks the hidden input.
+3. **The Activation:** CSS rules like `.roll-toggle:checked ~ .dice-area .dice` detect when the button is clicked and apply the fast-spinning `@keyframes roll` animations.
+4. **The Dice Faces:** Six `div`s (`.front`, `.back`, etc.) are rotated in 3D space (`rotateX`, `rotateY`, `translateZ`) to form a cube.
+
+---
+
+### 🛠️ How to Modify the Dice Component
+
+If you want to tweak `src/components/ui/Radio.tsx`, here are the most common things to change:
+
+**1. Change the Button Color Gradient**
+Find `.roll-toggle:checked ~ .controls .btn {` in the CSS template.
+Change the HEX codes:
+```css
+background: linear-gradient(180deg, #ff3366 0%, #ee2255 100%); /* Change these pink/red colors */
+```
+
+**2. Make the Dice Bigger or Smaller**
+Find the `.dice-area` CSS rule and adjust the `transform: scale()`:
+```css
+.dice-area {
+  transform: scale(0.7); /* Increase to 1.0 for original size, or lower to e.g., 0.5 to shrink */
+}
+```
+
+**3. Change the 3D Rotation Speed (When Rolling)**
+Look for the `:checked` animation rules:
+```css
+.roll-toggle:checked ~ .dice-area .dice {
+  animation: roll 1.2s linear infinite !important; /* Change 1.2s to 0.5s for faster, 2s for slower */
+}
+```
+
+**4. Change the Dice Face Colors**
+Find the `.face` class:
+```css
+.face {
+  background: linear-gradient(145deg, #fff 0%, #f8f8f8 50%, #f2f2f2 100%); /* Change for custom dice colors */
+}
+```
+
+**5. Change the winning number when stopped**
+Find these animations that dictate where the dice stop when the button is unchecked:
+```css
+@keyframes stop-at-5 { /* Top dice */
+  to { transform: rotateX(-70deg) rotateY(-15deg); }
+}
+@keyframes stop-at-3 { /* Bottom dice */
+  to { transform: rotateX(-25deg) rotateY(-105deg); }
+}
+```
+*(You'll need to experiment with the `deg` values to make different faces point towards the screen)*
+
+---
+
+### 🚀 Running the Project
+```bash
+cd "C:\Users\Asus\Desktop\Hasna portfolio 2.1\portfolio-3d"
+    npm run dev
+```
+
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it     🔐
+
+
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  this all code are very sensitive and very important for me so please don't share it with anyone and don't delete it  
+
+
+
+
+if you have any problem call me [9751008796]
+
+this for you Hasna and i wil do anything for you ❤️‍🩹 💖 💘 i can do anything for you ❤️‍🩹 💖 💘
